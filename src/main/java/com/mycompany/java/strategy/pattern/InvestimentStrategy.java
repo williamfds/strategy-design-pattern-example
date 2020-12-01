@@ -9,7 +9,7 @@ package com.mycompany.java.strategy.pattern;
  *
  * @author William
  */
-public interface InvestimentStratety {
+public interface InvestimentStrategy {
     double calculateProfits();
     double calculateTax();
     double calculateTotal();

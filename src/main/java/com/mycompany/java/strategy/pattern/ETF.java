@@ -9,7 +9,7 @@ package com.mycompany.java.strategy.pattern;
  *
  * @author William
  */
-public class ETF implements InvestimentStratety {
+public class ETF implements InvestimentStrategy {
 
   private double amount; 
   

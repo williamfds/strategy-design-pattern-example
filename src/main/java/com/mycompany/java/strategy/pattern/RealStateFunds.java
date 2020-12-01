@@ -9,7 +9,7 @@ package com.mycompany.java.strategy.pattern;
  *
  * @author William
  */
-public class RealStateFunds implements InvestimentStratety {
+public class RealStateFunds implements InvestimentStrategy {
 
   private double amount; 
   

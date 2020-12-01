@@ -19,20 +19,20 @@ public class InvestimentsDemonstration {
         
         System.out.println("Digite o valor inicial: ");
         amount = scanner.nextFloat();
-        
+                
         System.out.println("Seus investimentos ficariam da seguinte forma: ");
         
-        Actions action = new Actions(amount);
-        System.out.println("Em ações, seus investimentos teriam lucro bruto de R$" + action.calculateProfits() + " e teriam o total de IR = R$" + action.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(action.calculateTotal()));
+        InvestimentStrategy investimentStrategy = new Actions(amount);
+        System.out.println("Em ações, seus investimentos teriam lucro bruto de R$" + investimentStrategy.calculateProfits() + " e teriam o total de IR = R$" + investimentStrategy.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(investimentStrategy.calculateTotal()));
         
-        RealStateFunds rsf = new RealStateFunds(amount);
-        System.out.println("Em Fundos Imobiliários, seus investimentos teriam lucro bruto de R$" + rsf.calculateProfits() + " e teriam o total de IR = R$" + rsf.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(rsf.calculateTotal()));
+        investimentStrategy = new RealStateFunds(amount);
+        System.out.println("Em Fundos Imobiliários, seus investimentos teriam lucro bruto de R$" + investimentStrategy.calculateProfits() + " e teriam o total de IR = R$" + investimentStrategy.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(investimentStrategy.calculateTotal()));
         
-        ETF etf = new ETF(amount);
-        System.out.println("Em ETF, seus investimentos teriam lucro bruto de R$" + etf.calculateProfits() + " e teriam o total de IR = R$" + etf.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(etf.calculateTotal()));
+        investimentStrategy = new ETF(amount);
+        System.out.println("Em ETF, seus investimentos teriam lucro bruto de R$" + investimentStrategy.calculateProfits() + " e teriam o total de IR = R$" + investimentStrategy.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(investimentStrategy.calculateTotal()));
         
-        SavingsAccount sAcc = new SavingsAccount(amount);
-        System.out.println("Em Poupança, seus investimentos teriam lucro bruto de R$" + sAcc.calculateProfits() + " e teriam o total de IR = R$" + sAcc.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(sAcc.calculateTotal()));
+        investimentStrategy = new SavingsAccount(amount);
+        System.out.println("Em Poupança, seus investimentos teriam lucro bruto de R$" + investimentStrategy.calculateProfits() + " e teriam o total de IR = R$" + investimentStrategy.calculateTax() + ", ou seja, obteria um lucro líquido de R$ " + new DecimalFormat("#,##0.00").format(investimentStrategy.calculateTotal()));
         
     }
 }
