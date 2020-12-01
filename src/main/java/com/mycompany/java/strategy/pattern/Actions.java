@@ -25,8 +25,7 @@ public class Actions implements InvestimentStrategy {
     @Override
     public double calculateTax() {
         double profits = calculateProfits();
-        if (profits > 20000) { return profits * 0.15; }        
-        return 0;
+        return (profits > 20000) ? profits * 0.15 : 0;
     }
 
     @Override
